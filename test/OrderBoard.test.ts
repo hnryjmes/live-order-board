@@ -29,7 +29,7 @@ describe("OrderBoard", () => {
   });
 
   describe(".summarize", () => {
-    it("returns the t.summary of orders", () => {
+    it("returns the summary of orders", () => {
       OrderBoard.cancelAll();
 
       OrderBoard.register(t.orderA);
@@ -37,11 +37,14 @@ describe("OrderBoard", () => {
       OrderBoard.register(t.orderC);
       OrderBoard.register(t.orderD);
 
-      expect(OrderBoard.summarize()).toEqual([
-        t.summaryItem1,
-        t.summaryItem2,
-        t.summaryItem3,
-      ]);
+      expect(OrderBoard.summarize()).toEqual({
+        BUY: [],
+        SELL: [
+          t.summaryItem1,
+          t.summaryItem2,
+          t.summaryItem3,
+        ],
+      });
     });
   });
 });

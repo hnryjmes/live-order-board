@@ -21,7 +21,8 @@ export default class OrderBoard {
 
   public static summarize(): SummaryItem[] {
     const orders = OrderBoard.orders.slice();
-    const summaryItems: SummaryItem[] = [];
+    const summaryItemsSell: SummaryItem[] = [];
+    const summaryItemsBuy: SummaryItem[] = [];
 
     const prices = orders.map((order) => {
       return order.price.price;
@@ -57,8 +58,12 @@ export default class OrderBoard {
         mySummaryItem.mergeAndAddQuantity(order);
       });
 
-      summaryItems.push(mySummaryItem);
+      summaryItemsSell.push(mySummaryItem);
     });
+
+    const summaryItems: any = {};
+    summaryItems.BUY = summaryItemsBuy;
+    summaryItems.SELL = summaryItemsSell;
 
     return summaryItems;
   }
