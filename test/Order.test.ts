@@ -1,4 +1,5 @@
 import Order from "../src/Order";
+import OrderId from "../src/OrderId";
 import OrderType from "../src/OrderType";
 import Price from "../src/Price";
 import Quantity from "../src/Quantity";
@@ -9,7 +10,8 @@ describe("Order", () => {
   const myQuantity: Quantity = { quantity: 3.5 };
   const myPrice: Price = { price: 306 };
   const myOrderType: OrderType = { orderType: "SELL" };
-  const myOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType);
+  const myOrderId: OrderId = { orderId: 1 };
+  const myOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
 
   it("stores the userId", () => {
     expect(myOrder.userId).toBe(myUserId);
@@ -22,5 +24,8 @@ describe("Order", () => {
   });
   it("stores the orderType", () => {
     expect(myOrder.orderType).toBe(myOrderType);
+  });
+  it("stores the orderId", () => {
+    expect(myOrder.orderId).toBe(myOrderId);
   });
 });
