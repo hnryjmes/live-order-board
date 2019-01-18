@@ -55,6 +55,62 @@ export const orderD = new Order(
   orderIdD,
 );
 
+export const userIdE = { userId: 5 };
+export const quantityE = { quantity: 3.6, unit: "kg" };
+export const priceE = { price: 306, currency: "GBP" };
+export const orderTypeE = { orderType: "BUY" };
+export const orderIdE = { orderId: 5 };
+
+export const orderE = new Order(
+  userIdE,
+  quantityE,
+  priceE,
+  orderTypeE,
+  orderIdE,
+);
+
+export const userIdF = { userId: 6 };
+export const quantityF = { quantity: 1.3, unit: "kg" };
+export const priceF = { price: 319, currency: "GBP" };
+export const orderTypeF = { orderType: "BUY" };
+export const orderIdF = { orderId: 6 };
+
+export const orderF = new Order(
+  userIdF,
+  quantityF,
+  priceF,
+  orderTypeF,
+  orderIdF,
+);
+
+export const userIdG = { userId: 7 };
+export const quantityG = { quantity: 1.6, unit: "kg" };
+export const priceG = { price: 307, currency: "GBP" };
+export const orderTypeG = { orderType: "BUY" };
+export const orderIdG = { orderId: 7 };
+
+export const orderG = new Order(
+  userIdE,
+  quantityE,
+  priceE,
+  orderTypeE,
+  orderIdE,
+);
+
+export const userIdH = { userId: 8 };
+export const quantityH = { quantity: 2.1, unit: "kg" };
+export const priceH = { price: 306, currency: "GBP" };
+export const orderTypeH = { orderType: "BUY" };
+export const orderIdH = { orderId: 8 };
+
+export const orderH = new Order(
+  userIdH,
+  quantityH,
+  priceH,
+  orderTypeH,
+  orderIdH,
+);
+
 export const summaryQuantity1 = { quantity: 5.5, unit: "kg" };
 export const summaryPrice1 = { price: 306, currency: "GBP" };
 export const summaryOrderType1 = { orderType: "SELL" };
