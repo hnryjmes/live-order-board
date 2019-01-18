@@ -4,7 +4,8 @@
   "description": "A simple implementation of the SilverBars tech test in TypeScript.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
