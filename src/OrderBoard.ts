@@ -47,7 +47,9 @@ export default class OrderBoard {
       ordersByPrice[price] = [];
     });
 
-    Object.keys(ordersByPrice).map((price) => {
+    const uniquePricesKeys = Object.keys(ordersByPrice);
+
+    uniquePricesKeys.map((price) => {
       orders.map((order) => {
         if (order.price.price.toString() === price) {
           ordersByPrice[price].push(order);
@@ -55,7 +57,7 @@ export default class OrderBoard {
       });
     });
 
-    Object.keys(ordersByPrice).map((price) => {
+    uniquePricesKeys.map((price) => {
       const mySummaryQuantity: Quantity = { quantity: 0, unit: ""};
       const mySummaryPrice: Price = { price: 0, currency: "" };
       const mySummaryOrderType: OrderType = { orderType: "" };
