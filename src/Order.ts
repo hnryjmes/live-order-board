@@ -1,8 +1,8 @@
-import OrderId from "./OrderId";
-import OrderType from "./OrderType";
-import Price from "./Price";
-import Quantity from "./Quantity";
-import UserId from "./UserId";
+import OrderId from "./interfaces/OrderId";
+import OrderType from "./interfaces/OrderType";
+import Price from "./interfaces/Price";
+import Quantity from "./interfaces/Quantity";
+import UserId from "./interfaces/UserId";
 
 export default class Order {
   public readonly userId: UserId;

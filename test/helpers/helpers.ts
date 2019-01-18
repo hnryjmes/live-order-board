@@ -1,9 +1,9 @@
+import OrderId from "../../src/interfaces/OrderId";
+import OrderType from "../../src/interfaces/OrderType";
+import Price from "../../src/interfaces/Price";
+import Quantity from "../../src/interfaces/Quantity";
+import UserId from "../../src/interfaces/UserId";
 import Order from "../../src/Order";
-import OrderId from "../../src/OrderId";
-import OrderType from "../../src/OrderType";
-import Price from "../../src/Price";
-import Quantity from "../../src/Quantity";
-import UserId from "../../src/UserId";
 
 const myUserId: UserId = { userId: 1 };
 const myQuantity: Quantity = { quantity: 3.5, unit: "kg" };
