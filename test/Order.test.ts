@@ -3,7 +3,7 @@ import Order from "../src/Order";
 describe("Order", () => {
   let order: Order;
 
-  beforeEach(() => {
+  beforeAll(() => {
     order = new Order(1, 3.5, 306, "SELL");
   });
 
