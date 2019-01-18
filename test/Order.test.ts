@@ -1,20 +1,26 @@
 import Order from "../src/Order";
-import { myOrder, myOrderId, myOrderType, myPrice, myQuantity, myUserId } from "./helpers/helpers";
+import { myOrderA,
+  myOrderIdA,
+  myOrderTypeA,
+  myPriceA,
+  myQuantityA,
+  myUserIdA,
+} from "./helpers/helpers";
 
 describe("Order", () => {
   it("stores the userId", () => {
-    expect(myOrder.userId).toBe(myUserId);
+    expect(myOrderA.userId).toBe(myUserIdA);
   });
   it("stores the quantity", () => {
-    expect(myOrder.quantity).toBe(myQuantity);
+    expect(myOrderA.quantity).toBe(myQuantityA);
   });
   it("stores the price", () => {
-    expect(myOrder.price).toBe(myPrice);
+    expect(myOrderA.price).toBe(myPriceA);
   });
   it("stores the orderType", () => {
-    expect(myOrder.orderType).toBe(myOrderType);
+    expect(myOrderA.orderType).toBe(myOrderTypeA);
   });
   it("stores the orderId", () => {
-    expect(myOrder.orderId).toBe(myOrderId);
+    expect(myOrderA.orderId).toBe(myOrderIdA);
   });
 });
