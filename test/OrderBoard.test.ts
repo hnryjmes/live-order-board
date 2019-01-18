@@ -14,10 +14,22 @@ describe("OrderBoard", () => {
   const myOrderId: OrderId = { orderId: 1 };
   const myOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
 
+  const myOtherUserId: UserId = { userId: 2 };
+  const myOtherQuantity: Quantity = { quantity: 1.2, unit: "kg" };
+  const myOtherPrice: Price = { price: 310, currency: "GBP" };
+  const myOtherOrderType: OrderType = { orderType: "SELL" };
+  const myOtherOrderId: OrderId = { orderId: 2 };
+  const myOtherOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
+
   describe(".register", () => {
     it("registers a new order", () => {
       OrderBoard.register(myOrder);
       expect(OrderBoard.orders).toContain(myOrder);
+    });
+
+    it("registers and stores multiple new orders", () => {
+      OrderBoard.register(myOtherOrder);
+      expect(OrderBoard.orders).toContain(myOtherOrder);
     });
   });
 
