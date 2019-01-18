@@ -4,21 +4,26 @@ import Price from "../../src/interfaces/Price";
 import Quantity from "../../src/interfaces/Quantity";
 import UserId from "../../src/interfaces/UserId";
 import Order from "../../src/Order";
+import SummaryItem from "../../src/SummaryItem";
 
-const myUserId: UserId = { userId: 1 };
-const myQuantity: Quantity = { quantity: 3.5, unit: "kg" };
-const myPrice: Price = { price: 306, currency: "GBP" };
-const myOrderType: OrderType = { orderType: "SELL" };
-const myOrderId: OrderId = { orderId: 1 };
+export const myUserId: UserId = { userId: 1 };
+export const myQuantity: Quantity = { quantity: 3.5, unit: "kg" };
+export const myPrice: Price = { price: 306, currency: "GBP" };
+export const myOrderType: OrderType = { orderType: "SELL" };
+export const myOrderId: OrderId = { orderId: 1 };
 
-const myOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
+export const myOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
 
-const myOtherUserId: UserId = { userId: 2 };
-const myOtherQuantity: Quantity = { quantity: 1.2, unit: "kg" };
-const myOtherPrice: Price = { price: 310, currency: "GBP" };
-const myOtherOrderType: OrderType = { orderType: "SELL" };
-const myOtherOrderId: OrderId = { orderId: 2 };
+export const myOtherUserId: UserId = { userId: 2 };
+export const myOtherQuantity: Quantity = { quantity: 1.2, unit: "kg" };
+export const myOtherPrice: Price = { price: 310, currency: "GBP" };
+export const myOtherOrderType: OrderType = { orderType: "SELL" };
+export const myOtherOrderId: OrderId = { orderId: 2 };
 
-const myOtherOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
+export const myOtherOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
 
-export { myUserId, myQuantity, myPrice, myOrderType, myOrderId, myOrder, myOtherOrder };
+export const mySummaryQuantity: Quantity = { quantity: 5.5, unit: "kg" };
+export const mySummaryPrice: Price = { price: 306, currency: "GBP" };
+export const mySummaryOrderType: OrderType = { orderType: "SELL" };
+
+export const mySummaryItem: SummaryItem = new SummaryItem(mySummaryQuantity, mySummaryPrice, mySummaryOrderType);
