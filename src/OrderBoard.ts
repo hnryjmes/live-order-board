@@ -23,16 +23,6 @@ export default class OrderBoard {
     const orders = OrderBoard.orders.slice();
     const summaryItems: SummaryItem[] = [];
 
-    // Convert orders to summary items without merging
-    // OrderBoard.orders.map((order) => {
-    //   summaryItems.push(new SummaryItem(order.quantity, order.price, order.orderType));
-    // });
-
-    // Loop through orders checking the price
-    // If a SummaryItem with that price does not already exist
-    // Create a new SummaryItem
-    // Else update the existing SummaryItem with a new quantity
-
     const prices = orders.map((order) => {
       return order.price.price;
     });
