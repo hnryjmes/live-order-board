@@ -6,7 +6,7 @@ import Quantity from "../src/Quantity";
 import UserId from "../src/UserId";
 
 describe("OrderBoard", () => {
-  describe(".register()", () => {
+  describe(".register", () => {
     const myUserId: UserId = { userId: 1 };
     const myQuantity: Quantity = { quantity: 3.5 };
     const myPrice: Price = { price: 306 };
