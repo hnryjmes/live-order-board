@@ -21,4 +21,4 @@ const myOtherOrderId: OrderId = { orderId: 2 };
 
 const myOtherOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType, myOrderId);
 
-export { myOrder, myOtherOrder };
+export { myUserId, myQuantity, myPrice, myOrderType, myOrderId, myOrder, myOtherOrder };
