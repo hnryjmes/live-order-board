@@ -9,18 +9,18 @@ describe("Order", () => {
   const myQuantity: Quantity = { quantity: 3.5 };
   const myPrice: Price = { price: 306 };
   const myOrderType: OrderType = { orderType: "SELL" };
-  const order: Order = new Order(myUserId, myQuantity, myPrice, myOrderType);
+  const myOrder: Order = new Order(myUserId, myQuantity, myPrice, myOrderType);
 
   it("stores the userId", () => {
-    expect(order.userId).toBe(myUserId);
+    expect(myOrder.userId).toBe(myUserId);
   });
   it("stores the quantity", () => {
-    expect(order.quantity).toBe(myQuantity);
+    expect(myOrder.quantity).toBe(myQuantity);
   });
   it("stores the price", () => {
-    expect(order.price).toBe(myPrice);
+    expect(myOrder.price).toBe(myPrice);
   });
   it("stores the orderType", () => {
-    expect(order.orderType).toBe(myOrderType);
+    expect(myOrder.orderType).toBe(myOrderType);
   });
 });
