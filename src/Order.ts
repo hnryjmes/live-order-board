@@ -1,10 +1,15 @@
-export default class Order {
-  public userId: number;
-  public quantity: number;
-  public price: number;
-  public orderType: string;
+import OrderType from "./OrderType";
+import Price from "./Price";
+import Quantity from "./Quantity";
+import UserId from "./UserId";
 
-  constructor(userId: number, quantity: number, price: number, orderType: string) {
+export default class Order {
+  public userId: UserId;
+  public quantity: Quantity;
+  public price: Price;
+  public orderType: OrderType;
+
+  constructor(userId: UserId, quantity: Quantity, price: Price, orderType: OrderType) {
     this.userId = userId;
     this.quantity = quantity;
     this.price = price;
