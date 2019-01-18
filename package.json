@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/hnryjmes/live-order-board/issues"
   },
-  "homepage": "https://github.com/hnryjmes/live-order-board#readme"
+  "homepage": "https://github.com/hnryjmes/live-order-board#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5"
+  }
 }
