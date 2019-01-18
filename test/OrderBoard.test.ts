@@ -1,31 +1,23 @@
 import OrderBoard from "../src/OrderBoard";
-import {
-  myOrderA,
-  myOrderB,
-  myOrderC,
-  myOrderD,
-  mySummaryItem1,
-  mySummaryItem2,
-  mySummaryItem3,
-} from "./helpers/helpers";
+import * as t from "./helpers/testHelpers";
 
 describe("OrderBoard", () => {
   describe(".register", () => {
     it("registers a new order", () => {
-      OrderBoard.register(myOrderA);
-      expect(OrderBoard.orders).toContain(myOrderA);
+      OrderBoard.register(t.orderA);
+      expect(OrderBoard.orders).toContain(t.orderA);
     });
 
     it("registers and stores multiple new orders", () => {
-      OrderBoard.register(myOrderB);
-      expect(OrderBoard.orders).toContain(myOrderB);
+      OrderBoard.register(t.orderB);
+      expect(OrderBoard.orders).toContain(t.orderB);
     });
   });
 
   describe(".cancel", () => {
     it("cancels an existing order", () => {
-      OrderBoard.cancel(myOrderA);
-      expect(OrderBoard.orders).not.toContain(myOrderA);
+      OrderBoard.cancel(t.orderA);
+      expect(OrderBoard.orders).not.toContain(t.orderA);
     });
   });
 
@@ -37,18 +29,18 @@ describe("OrderBoard", () => {
   });
 
   describe(".summarize", () => {
-    it("returns the summary of orders", () => {
+    it("returns the t.summary of orders", () => {
       OrderBoard.cancelAll();
 
-      OrderBoard.register(myOrderA);
-      OrderBoard.register(myOrderB);
-      OrderBoard.register(myOrderC);
-      OrderBoard.register(myOrderD);
+      OrderBoard.register(t.orderA);
+      OrderBoard.register(t.orderB);
+      OrderBoard.register(t.orderC);
+      OrderBoard.register(t.orderD);
 
       expect(OrderBoard.summarize()).toEqual([
-        mySummaryItem1,
-        mySummaryItem2,
-        mySummaryItem3,
+        t.summaryItem1,
+        t.summaryItem2,
+        t.summaryItem3,
       ]);
     });
   });
