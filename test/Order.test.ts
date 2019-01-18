@@ -1,32 +1,32 @@
 import Order from "../src/Order";
-import * as test from "./helpers/testHelpers";
+import * as t from "./helpers/testHelpers";
 
 describe("Order", () => {
   const myOrderA = new Order(
-    test.userIdA,
-    test.quantityA,
-    test.priceA,
-    test.orderTypeA,
-    test.orderIdA,
+    t.userIdA,
+    t.quantityA,
+    t.priceA,
+    t.orderTypeA,
+    t.orderIdA,
   );
 
   it("stores the userId", () => {
-    expect(myOrderA.userId).toBe(test.userIdA);
+    expect(myOrderA.userId).toBe(t.userIdA);
   });
 
   it("stores the quantity", () => {
-    expect(myOrderA.quantity).toBe(test.quantityA);
+    expect(myOrderA.quantity).toBe(t.quantityA);
   });
 
   it("stores the price", () => {
-    expect(myOrderA.price).toBe(test.priceA);
+    expect(myOrderA.price).toBe(t.priceA);
   });
 
   it("stores the orderType", () => {
-    expect(myOrderA.orderType).toBe(test.orderTypeA);
+    expect(myOrderA.orderType).toBe(t.orderTypeA);
   });
 
   it("stores the orderId", () => {
-    expect(myOrderA.orderId).toBe(test.orderIdA);
+    expect(myOrderA.orderId).toBe(t.orderIdA);
   });
 });
