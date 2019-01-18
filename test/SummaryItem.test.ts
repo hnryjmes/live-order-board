@@ -1,20 +1,16 @@
 import SummaryItem from "../src/SummaryItem";
-import { mySummaryItem1,
-  mySummaryOrderType1,
-  mySummaryPrice1,
-  mySummaryQuantity1,
-} from "./helpers/helpers";
+import * as t from "./helpers/testHelpers";
 
 describe("SummaryItem", () => {
   it("stores the total quantity", () => {
-    expect(mySummaryItem1.quantity).toEqual(mySummaryQuantity1);
+    expect(t.summaryItem1.quantity).toEqual(t.summaryQuantity1);
   });
 
   it("stores the price", () => {
-    expect(mySummaryItem1.price).toEqual(mySummaryPrice1);
+    expect(t.summaryItem1.price).toEqual(t.summaryPrice1);
   });
 
   it("stores the order type", () => {
-    expect(mySummaryItem1.orderType).toEqual(mySummaryOrderType1);
+    expect(t.summaryItem1.orderType).toEqual(t.summaryOrderType1);
   });
 });
