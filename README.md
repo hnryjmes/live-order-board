@@ -6,6 +6,24 @@ Task: build a Live Order Board for SilverBars Marketplace to display to users ho
 
 ### Usage
 
+First, clone the repository to your local machine, then navigate to the new directory created.
+
+```sh
+$ git clone https://github.com/hnryjmes/live-order-board.git
+$ cd live-order-board
+```
+
+To use the app or run a manual feature test, it is recommended to use the ts-node package included in the download using npm to start a REPL.
+
+```sh
+$ npm run ts-node
+
+> live-order-board@1.0.0 ts-node /<your directory>/live-order-board
+> ts-node
+
+> 
+```
+
 ### Tests
 
 ### Design
