@@ -159,3 +159,7 @@ As a user
 I want to see the price of 'BUY' orders ordered highest first
 So I can prioritize the information I see about future purchases
 ```
+
+### Problem Statement
+
+The problem statement can be viewed [here](./problem-statement.md).
