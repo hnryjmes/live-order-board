@@ -1,4 +1,4 @@
-# live-order-board
+# Live Order Board
 
 A simple implementation of the SilverBars tech test in TypeScript. 
 
