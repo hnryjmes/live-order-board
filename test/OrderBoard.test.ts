@@ -29,7 +29,7 @@ describe("OrderBoard", () => {
   });
 
   describe(".summarize", () => {
-    it("returns the summary of orders", () => {
+    it("returns the summary for SELL orders", () => {
       OrderBoard.cancelAll();
 
       OrderBoard.register(t.orderA);
@@ -39,6 +39,51 @@ describe("OrderBoard", () => {
 
       expect(OrderBoard.summarize()).toEqual({
         BUY: [],
+        SELL: [
+          t.summaryItem1,
+          t.summaryItem2,
+          t.summaryItem3,
+        ],
+      });
+    });
+
+    it("returns the summary for BUY orders", () => {
+      OrderBoard.cancelAll();
+
+      OrderBoard.register(t.orderE);
+      OrderBoard.register(t.orderF);
+      OrderBoard.register(t.orderG);
+      OrderBoard.register(t.orderH);
+
+      expect(OrderBoard.summarize()).toEqual({
+        BUY: [
+          t.summaryItem6,
+          t.summaryItem5,
+          t.summaryItem4,
+        ],
+        SELL: [],
+      });
+    });
+
+    it("returns the summary for SELL and BUY orders", () => {
+      OrderBoard.cancelAll();
+
+      OrderBoard.register(t.orderA);
+      OrderBoard.register(t.orderB);
+      OrderBoard.register(t.orderC);
+      OrderBoard.register(t.orderD);
+
+      OrderBoard.register(t.orderE);
+      OrderBoard.register(t.orderF);
+      OrderBoard.register(t.orderG);
+      OrderBoard.register(t.orderH);
+
+      expect(OrderBoard.summarize()).toEqual({
+        BUY: [
+          t.summaryItem6,
+          t.summaryItem5,
+          t.summaryItem4,
+        ],
         SELL: [
           t.summaryItem1,
           t.summaryItem2,

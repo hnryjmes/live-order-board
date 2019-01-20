@@ -21,25 +21,40 @@ export default class OrderBoard {
 
   public static summarize(): SummaryItem[] {
     const orders = OrderBoard.orders.slice();
-    const summaryItemsSell: SummaryItem[] = [];
-    const summaryItemsBuy: SummaryItem[] = [];
 
+    const sellOrders = orders.filter((order) => {
+      return order.orderType.orderType === "SELL";
+    });
+    let summaryItemsSell: SummaryItem[] = [];
+    summaryItemsSell = OrderBoard._convertOrdersToSummaryItems(sellOrders, summaryItemsSell);
+
+    const buyOrders = orders.filter((order) => {
+      return order.orderType.orderType === "BUY";
+    });
+    let summaryItemsBuy: SummaryItem[] = [];
+    summaryItemsBuy = OrderBoard._convertOrdersToSummaryItems(buyOrders, summaryItemsBuy);
+
+    const summaryItems: any = {};
+    summaryItems.BUY = summaryItemsBuy.reverse();
+    summaryItems.SELL = summaryItemsSell;
+
+    return summaryItems;
+  }
+
+  private static _convertOrdersToSummaryItems(orders: Order[], summaryItems: SummaryItem[]) {
     const prices = orders.map((order) => {
       return order.price.price;
     });
-
     const uniquePrices = prices.filter((price, index) => {
       return prices.indexOf(price) === index;
     });
 
     const ordersByPrice: any = {};
-
     uniquePrices.map((price) => {
       ordersByPrice[price] = [];
     });
 
     const uniquePricesKeys = Object.keys(ordersByPrice);
-
     uniquePricesKeys.map((price) => {
       orders.map((order) => {
         if (order.price.price.toString() === price) {
@@ -58,12 +73,8 @@ export default class OrderBoard {
         mySummaryItem.mergeAndAddQuantity(order);
       });
 
-      summaryItemsSell.push(mySummaryItem);
+      summaryItems.push(mySummaryItem);
     });
-
-    const summaryItems: any = {};
-    summaryItems.BUY = summaryItemsBuy;
-    summaryItems.SELL = summaryItemsSell;
 
     return summaryItems;
   }
