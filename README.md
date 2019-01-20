@@ -4,7 +4,7 @@ A simple implementation of the SilverBars tech test in TypeScript.
 
 Task: build a Live Order Board for SilverBars Marketplace to display to users how much market demand there is for silver bars.
 
-### Usage
+## Usage
 
 It is assumed that your environment is set up to use `git` and `npm` commands.
 
@@ -81,7 +81,7 @@ The order can now be viewed in the `orders` array. Additionally, calling the `su
 >
 ```
 
-### Tests
+## Tests
 
 To run tests, use the npm script `npm run test`, which runs the bundled version of Jest.
 
@@ -132,7 +132,7 @@ Time:        1.097s
 Ran all test suites.
 ```
 
-### Design
+## Design
 
 The Live Order Board is implemented using three classes, `Order`, `OrderBoard`, and `SummaryItem`. Interfaces are used to define the acceptable inputs when creating a new `Order` object. For example, trying to create a new `Order` object with no arguments will raise a TypeScript compiler error. A new `Order` object can only be created when the arguments passed are precisely 5 objects with types corresponding to the four required fields in the problem statement (`UserId`, `Quantity`, `Price`, `OrderType`) and one  unique order identifier (`OrderId`). Due to TypeScript accepting duck types, input will be accepted with the same structure and properties as the defined interfaces, i.e. the interfaces are not objects that must be instantiated, but merely are guides to valid input. See 'Usage' section for an example.
 
@@ -142,7 +142,7 @@ I chose to work in TypeScript rather than JavaScript, as I knew the type checkin
 
 I focused on object-oriented design (OOD) and used test-driven-development (TDD) throughout.
 
-### User Stories
+## User Stories
 
 I wrote user stories as part of my development workflow in order to plan what tests I needed to write.
 
@@ -168,6 +168,6 @@ I want to see the price of 'BUY' orders ordered highest first
 So I can prioritize the information I see about future purchases
 ```
 
-### Problem Statement
+## Problem Statement
 
 The problem statement can be viewed [here](./problem-statement.md).
