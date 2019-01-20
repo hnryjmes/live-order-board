@@ -48,7 +48,7 @@ To create a valid Order, the five arguments passed must be as defined in the int
 
 ```sh
 > const validOrder = new Order(
-... { userId: 1},
+... { userId: 1 },
 ... { quantity: 3.5, unit: "kg" },
 ... { price: 306, currency: "GBP" },
 ... { orderType: "SELL" },
