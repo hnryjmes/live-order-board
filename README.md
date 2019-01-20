@@ -6,6 +6,8 @@ Task: build a Live Order Board for SilverBars Marketplace to display to users ho
 
 ### Usage
 
+It is assumed that your environment is set up to use `git` and `npm` commands.
+
 First, clone the repository to your local machine, then navigate to the new directory created.
 
 ```sh
