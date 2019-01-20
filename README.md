@@ -140,7 +140,11 @@ Why the unique order identifier (`OrderId`)? For this problem, specifically in o
 
 I chose to work in TypeScript rather than JavaScript, as I knew the type checking features of TypeScript would make the development process easier, plus the TypeScript compiler helpfully points out errors as you write code. I used TSLint for linting, using the default config provided by `tslint --init`.  For other config e.g. Jest (`jest.config.js`) and the TypeScript compiler (`tsconfig.json`), I referred to the exemplar [TypeScript-Node-Starter](https://github.com/Microsoft/TypeScript-Node-Starter) repository provided by Microsoft.
 
+I focused on object-oriented design (OOD) and used test-driven-development (TDD) throughout.
+
 ### User Stories
+
+I wrote user stories as part of my development workflow in order to plan what tests I needed to write.
 
 ```
 As a user
